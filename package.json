@@ -1,6 +1,6 @@
 {
   "name": "@littledragon_wxl/drawio-style-graph",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate .drawio diagrams with 8 professional visual styles. Self-contained — no external skill dependencies.",
   "main": "SKILL.md",
   "keywords": [
@@ -40,4 +40,3 @@
     "node": ">=14.0.0"
   }
 }
-
