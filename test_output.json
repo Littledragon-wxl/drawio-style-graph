@@ -1,0 +1,12 @@
+{
+  "direction": "LR",
+  "nodes": [
+    {"id": "api", "label": "API Gateway", "width": 140, "height": 60},
+    {"id": "auth", "label": "Auth Service", "width": 140, "height": 60},
+    {"id": "db", "label": "Database", "width": 140, "height": 60}
+  ],
+  "edges": [
+    {"source": "api", "target": "auth", "label": "verify"},
+    {"source": "auth", "target": "db", "label": "query"}
+  ]
+}

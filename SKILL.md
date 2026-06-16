@@ -305,6 +305,33 @@ python3 scripts/encode_drawio_url.py diagram.drawio        # viewer
 python3 scripts/encode_drawio_url.py --edit diagram.drawio  # editor
 ```
 
+### Optional: Preview in draw.io Browser
+
+To open the generated `.drawio` file for live editing and preview in draw.io, use the 
+built-in preview script:
+
+```bash
+# Opens in native draw.io desktop app (preferred if installed)
+python3 scripts/open_drawio.py diagram.drawio
+
+# Or force browser editor mode
+python3 scripts/open_drawio.py diagram.drawio --edit
+
+# Or force browser-based preview (if desktop app unavailable)
+python3 scripts/open_drawio.py diagram.drawio --browser
+```
+
+**Supported platforms:**
+- **macOS:** Automatically detects `/Applications/draw.io.app`
+- **Windows:** Looks for `C:\Program Files\draw.io\draw.io.exe`
+- **Linux:** Uses `drawio` command if in PATH
+- **Browser fallback:** Generates a diagrams.net URL if desktop app unavailable
+
+**Behind the scenes:**
+1. Tries to open with the native draw.io app first (fastest, no browser needed)
+2. Falls back to generating a diagrams.net URL if app not found
+3. Automatically opens your default browser with the sharable URL
+
 ## Draw.io XML Quick Reference
 
 ### Vertex (Shape)
