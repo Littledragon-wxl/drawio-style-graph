@@ -1,0 +1,47 @@
+{
+  "name": "@Agents365-ai/drawio-style-graph",
+  "version": "1.0.0",
+  "description": "Generate .drawio diagrams with 8 professional visual styles adapted from fireworks-tech-graph. Combines rich visual design systems with draw.io's shape vocabulary, icon libraries, and export pipeline.",
+  "license": "MIT",
+  "homepage": "https://github.com/Agents365-ai/drawio-style-graph",
+  "keywords": [
+    "drawio",
+    "diagram",
+    "flowchart",
+    "architecture",
+    "visualization",
+    "uml",
+    "svg",
+    "style-preset",
+    "skill"
+  ],
+  "skills": {
+    "name": "drawio-style-graph",
+    "version": "1.0.0",
+    "description": "Use when the user wants to create any technical diagram with custom visual styles — architecture, data flow, flowchart, sequence, agent/memory, ERD, UML, or concept map — and export as .drawio (editable) + PNG/SVG/PDF. 8 built-in visual styles adapted from fireworks-tech-graph, rendered through draw.io's rich shape vocabulary and icon system.",
+    "compatibility": "Requires draw.io desktop app CLI and drawio-skill installed. Optional: Graphviz for auto-layout.",
+    "platforms": ["macos", "linux", "windows"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Agents365-ai/drawio-style-graph"
+  },
+  "author": "Agents365-ai",
+  "bundledScripts": [
+    "scripts/shapesearch.py",
+    "scripts/aiicons.py",
+    "scripts/validate.py",
+    "scripts/repair_png.py",
+    "scripts/autolayout.py",
+    "scripts/encode_drawio_url.py",
+    "scripts/pyimports.py",
+    "scripts/jsimports.py",
+    "scripts/goimports.py",
+    "scripts/rustimports.py",
+    "scripts/pyclasses.py"
+  ],
+  "bundledData": [
+    "data/shape-index.json.gz",
+    "data/lobe-icons.json"
+  ]
+}

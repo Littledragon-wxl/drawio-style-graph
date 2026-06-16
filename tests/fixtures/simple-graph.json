@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    {"id": "n1", "label": "Client", "shape": "box"},
+    {"id": "n2", "label": "API Gateway", "shape": "box"},
+    {"id": "n3", "label": "Auth Service", "shape": "box"},
+    {"id": "n4", "label": "User Service", "shape": "box"},
+    {"id": "n5", "label": "PostgreSQL", "shape": "cylinder"}
+  ],
+  "edges": [
+    {"source": "n1", "target": "n2", "label": "HTTPS"},
+    {"source": "n2", "target": "n3", "label": "auth"},
+    {"source": "n2", "target": "n4", "label": "REST"},
+    {"source": "n4", "target": "n5", "label": "SQL"}
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Agents365-ai/drawio-style-graph/styles/schema.json",
+  "title": "Draw.io Style Graph — Style Preset Schema",
+  "description": "Schema for visual style presets that map fireworks-tech-graph design tokens to draw.io-compatible style strings.",
+  "type": "object",
+  "required": ["name", "version", "palette", "typography", "shapes", "edges"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Lowercase style name (e.g., 'flat-icon', 'dark-terminal').",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of this style preset.",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of the style."
+    },
+    "canvas": {
+      "type": "object",
+      "description": "Canvas/page background settings.",
+      "required": ["background"],
+      "properties": {
+        "background": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Hex color for mxGraphModel background."
+        }
+      }
+    },
+    "palette": {
+      "type": "object",
+      "description": "Color palette — maps semantic roles to fillColor/strokeColor pairs.",
+      "required": ["primary", "success", "warning", "accent", "danger", "secondary", "neutral"],
+      "properties": {
+        "primary": {
+          "$ref": "#/$defs/colorPair",
+          "description": "Services, main components."
+        },
+        "success": {
+          "$ref": "#/$defs/colorPair",
+          "description": "Databases, storage."
+        },
+        "warning": {
+          "$ref": "#/$defs/colorPair",
+          "description": "Queues, message buses, decisions."
+        },
+        "accent": {
+          "$ref": "#/$defs/colorPair",
+          "description": "Gateways, APIs, load balancers."
+        },
+        "danger": {
+          "$ref": "#/$defs/colorPair",
+          "description": "Errors, alerts."
+        },
+        "secondary": {
+          "$ref": "#/$defs/colorPair",
+          "description": "Security, authentication."
+        },
+        "neutral": {
+          "$ref": "#/$defs/colorPair",
+          "description": "External systems, neutral components."
+        }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "description": "Font settings for vertex styles.",
+      "required": ["fontFamily", "fontSize", "fontColor"],
+      "properties": {
+        "fontFamily": {
+          "type": "string",
+          "description": "CSS font-family value."
+        },
+        "fontSize": {
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 48,
+          "description": "Default font size for labels."
+        },
+        "titleFontSize": {
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 72,
+          "description": "Font size for titles/section headers."
+        },
+        "subLabelFontSize": {
+          "type": "integer",
+          "minimum": 6,
+          "maximum": 36,
+          "description": "Font size for sub-labels and annotations."
+        },
+        "fontColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Primary text color."
+        },
+        "secondaryFontColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Secondary/muted text color."
+        },
+        "titleFontFamily": {
+          "type": "string",
+          "description": "Optional separate font for titles (e.g., serif for Dark Luxury)."
+        }
+      }
+    },
+    "shapes": {
+      "type": "object",
+      "description": "Shape style preferences.",
+      "required": ["rounded"],
+      "properties": {
+        "rounded": {
+          "type": "integer",
+          "enum": [0, 1],
+          "description": "0 = sharp corners, 1 = rounded corners."
+        },
+        "strokeWidth": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 10,
+          "description": "Default stroke width for vertex shapes."
+        }
+      }
+    },
+    "edges": {
+      "type": "object",
+      "description": "Edge/connector style preferences.",
+      "required": ["baseStyle", "flows"],
+      "properties": {
+        "baseStyle": {
+          "type": "string",
+          "description": "Base edge style string (before color/dash routing properties)."
+        },
+        "edgeStrokeWidth": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 10,
+          "description": "Default stroke width for edges."
+        },
+        "flows": {
+          "type": "object",
+          "description": "Flow-type to edge color/dash mapping.",
+          "patternProperties": {
+            "^[a-z-]+$": {
+              "type": "object",
+              "required": ["strokeColor"],
+              "properties": {
+                "strokeColor": {
+                  "type": "string",
+                  "pattern": "^#[0-9a-fA-F]{6}$"
+                },
+                "dashed": {
+                  "type": "boolean",
+                  "default": false
+                },
+                "strokeWidth": {
+                  "type": "number",
+                  "minimum": 0.5
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "extras": {
+      "type": "object",
+      "description": "Additional style flags applied to all vertices/edges.",
+      "properties": {
+        "sketch": {
+          "type": "boolean",
+          "description": "Enable draw.io sketch mode (rough edges)."
+        },
+        "shadow": {
+          "type": "boolean",
+          "description": "Enable drop shadow on shapes."
+        },
+        "glass": {
+          "type": "boolean",
+          "description": "Enable glass effect (semi-transparent)."
+        },
+        "globalStrokeWidth": {
+          "type": "number",
+          "description": "Override stroke width for all vertices and edges."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "colorPair": {
+      "type": "object",
+      "required": ["fillColor", "strokeColor"],
+      "properties": {
+        "fillColor": {
+          "type": "string",
+          "pattern": "^(#[0-9a-fA-F]{6}|none)$",
+          "description": "Hex fill color or 'none' for transparent."
+        },
+        "strokeColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Hex stroke/border color."
+        }
+      }
+    }
+  }
+}

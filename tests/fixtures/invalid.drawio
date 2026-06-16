@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="Page-1">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Node A" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <!-- Dangling edge: target id 999 does not exist -->
+        <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" parent="1" source="2" target="999">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Self-closing edge: invalid, missing mxGeometry child -->
+        <mxCell id="11" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="2" target="2" />
+        <!-- Duplicate id -->
+        <mxCell id="2" value="Duplicate" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
