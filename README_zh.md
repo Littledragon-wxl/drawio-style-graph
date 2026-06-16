@@ -78,6 +78,18 @@ fireworks-tech-graph                  drawio-skill
 
 ## 快速开始
 
+### 安装
+
+```bash
+npx skills add littledragon_wxl/drawio-style-graph
+```
+
+或通过 npm：
+
+```bash
+npm install @littledragon_wxl/drawio-style-graph
+```
+
 ### 前置条件
 
 1. 安装 draw.io 桌面版：[下载](https://github.com/jgraph/drawio-desktop/releases)

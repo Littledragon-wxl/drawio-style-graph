@@ -78,6 +78,18 @@ Each style is a complete design system mapped to draw.io `style=` token strings:
 
 ## Quick Start
 
+### Install
+
+```bash
+npx skills add littledragon_wxl/drawio-style-graph
+```
+
+Or via npm:
+
+```bash
+npm install @littledragon_wxl/drawio-style-graph
+```
+
 ### Prerequisites
 
 1. Install draw.io desktop: [download](https://github.com/jgraph/drawio-desktop/releases)
