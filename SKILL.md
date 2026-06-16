@@ -18,7 +18,7 @@ description: >-
   or mermaid/plantuml code blocks.
 license: MIT
 homepage: https://github.com/Agents365-ai/drawio-style-graph
-install: npx skills add littledragon_wxl/drawio-style-graph
+install: npx skills add Littledragon-wxl/drawio-style-graph
 compatibility: >-
   Requires draw.io desktop app CLI on PATH (macOS/Linux/Windows) for export.
   Core .drawio generation needs Python 3 only.
@@ -38,7 +38,7 @@ exported file in draw.io recovers the editable diagram.
 ## Install
 
 ```bash
-npx skills add littledragon_wxl/drawio-style-graph
+npx skills add Littledragon-wxl/drawio-style-graph
 ```
 
 Or directly from npm:

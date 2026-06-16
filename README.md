@@ -81,7 +81,7 @@ Each style is a complete design system mapped to draw.io `style=` token strings:
 ### Install
 
 ```bash
-npx skills add littledragon_wxl/drawio-style-graph
+npx skills add Littledragon-wxl/drawio-style-graph
 ```
 
 Or via npm:
