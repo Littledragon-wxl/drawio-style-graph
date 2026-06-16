@@ -1,5 +1,5 @@
 {
-  "name": "@agents365-ai/drawio-style-graph",
+  "name": "@littledragon_wxl/drawio-style-graph",
   "version": "1.0.0",
   "description": "Generate .drawio diagrams with 8 professional visual styles. Self-contained — no external skill dependencies.",
   "main": "SKILL.md",
@@ -15,16 +15,16 @@
     "skill",
     "claude-code"
   ],
-  "author": "Agents365-ai",
+  "author": "littledragon_wxl",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Agents365-ai/drawio-style-graph.git"
+    "url": "git+https://github.com/Littledragon-wxl/drawio-style-graph.git"
   },
   "bugs": {
-    "url": "https://github.com/Agents365-ai/drawio-style-graph/issues"
+    "url": "https://github.com/Littledragon-wxl/drawio-style-graph/issues"
   },
-  "homepage": "https://github.com/Agents365-ai/drawio-style-graph#readme",
+  "homepage": "https://github.com/Littledragon-wxl/drawio-style-graph#readme",
   "files": [
     "SKILL.md",
     "README.md",
