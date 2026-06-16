@@ -1,5 +1,7 @@
 # drawio-style-graph
 
+**English** · [中文](README_zh.md)
+
 > **8 professional visual styles x draw.io editable format.**
 > Describe your system in natural language — get a styled, editable .drawio diagram.
 
