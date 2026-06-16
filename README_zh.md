@@ -90,6 +90,19 @@ npx skills add Littledragon-wxl/drawio-style-graph
 npm install @littledragon_wxl/drawio-style-graph
 ```
 
+### 更新到最新版本
+
+```bash
+# 使用 npm 更新
+npm update @littledragon_wxl/drawio-style-graph
+
+# 或重新安装最新版本
+npm install @littledragon_wxl/drawio-style-graph@latest
+
+# 查看当前版本
+npm list @littledragon_wxl/drawio-style-graph
+```
+
 ### 前置条件
 
 1. 安装 draw.io 桌面版：[下载](https://github.com/jgraph/drawio-desktop/releases)

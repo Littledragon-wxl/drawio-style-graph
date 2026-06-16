@@ -90,6 +90,19 @@ Or via npm:
 npm install @littledragon_wxl/drawio-style-graph
 ```
 
+### Update to Latest Version
+
+```bash
+# Using npm
+npm update @littledragon_wxl/drawio-style-graph
+
+# Or reinstall to latest
+npm install @littledragon_wxl/drawio-style-graph@latest
+
+# Check current version
+npm list @littledragon_wxl/drawio-style-graph
+```
+
 ### Prerequisites
 
 1. Install draw.io desktop: [download](https://github.com/jgraph/drawio-desktop/releases)
