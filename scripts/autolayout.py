@@ -305,13 +305,13 @@ def to_drawio(graph, height, pos, edge_pts, color=True):
             f"        </mxCell>"
         )
     return (
-        '<mxfile>\n  <diagram id="autolayout" name="Page-1">\n'
-        '    <mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" '
-        'tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" '
-        'pageWidth="850" pageHeight="1100" math="0" shadow="0">\n'
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<mxfile host="drawio" version="26.0.0">\n'
+        '  <diagram name="Page-1">\n'
+        '    <mxGraphModel>\n'
         "      <root>\n"
-        '        <mxCell id="0"/>\n'
-        '        <mxCell id="1" parent="0"/>\n'
+        '        <mxCell id="0" />\n'
+        '        <mxCell id="1" parent="0" />\n'
         + "\n".join(cells)
         + "\n      </root>\n    </mxGraphModel>\n  </diagram>\n</mxfile>\n"
     )

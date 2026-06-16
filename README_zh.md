@@ -81,7 +81,7 @@ fireworks-tech-graph                  drawio-skill
 ### 安装
 
 ```bash
-npx skills add littledragon_wxl/drawio-style-graph
+npx skills add Littledragon-wxl/drawio-style-graph
 ```
 
 或通过 npm：
