@@ -7,6 +7,7 @@ description: >-
   UML, or concept map — and export as .drawio (editable) + PNG/SVG/PDF.
   8 built-in visual styles adapted from fireworks-tech-graph, rendered
   through draw.io's rich shape vocabulary and icon system.
+  Self-contained — no other skills required.
   Trigger on: "风格图" "带风格的图" "暗黑风格" "蓝图风格" "极简风格"
   "玻璃风格" "奢华风格" "style diagram" "styled architecture"
   "drawio" "draw.io" ".drawio" "可编辑的图" "editable diagram"
@@ -17,6 +18,7 @@ description: >-
   or mermaid/plantuml code blocks.
 license: MIT
 homepage: https://github.com/Agents365-ai/drawio-style-graph
+install: npx skills add agents365-ai/drawio-style-graph
 compatibility: >-
   Requires draw.io desktop app CLI on PATH (macOS/Linux/Windows) for export.
   Core .drawio generation needs Python 3 only.
@@ -32,6 +34,20 @@ PNG/SVG/PDF/JPG locally using the native draw.io desktop app CLI.
 **Supported formats:** PNG, SVG, PDF, JPG — no browser automation needed.
 PNG, SVG, and PDF exports support `--embed-diagram` (`-e`) — opening the
 exported file in draw.io recovers the editable diagram.
+
+## Install
+
+```bash
+npx skills add agents365-ai/drawio-style-graph
+```
+
+Or directly from npm:
+
+```bash
+npm install @agents365-ai/drawio-style-graph
+```
+
+No other skills required — everything is self-contained.
 
 ## When to use / when NOT to use
 
